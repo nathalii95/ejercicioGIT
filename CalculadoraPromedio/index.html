@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<style>
+    body {
+    background-color: rgb(20, 20, 20);
+   }
+   .principal{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:center;
+    margin-top: 20px;
+   }
+    .titulopr{
+        text-transform: uppercase;
+        color: white;
+        font-weight: bold;
+        font-size: 15px;
+        font-style: italic;
+    }
+    .btnprom{
+        border: none; 
+        color: black; 
+        padding: 14px 28px; 
+        font-size: 15px;
+        cursor: pointer; 
+        border-radius: 5px; 
+        font-weight: bolder;
+        background-color: white;
+        border: 2px solid #ff9800;
+    }
+   .btnprom:hover {
+    background: #e68a00; 
+    color: white;
+    }
+</style>
+<body>
+    <div class="principal">
+        <h5 class="titulopr">Calculadora de Promedio de Notas con Validación y Mensajes
+            Personalizados, en JavaScript.CCCCC
+        </h5>  
+        <button class="btnprom" onclick="btncaclular()" title="hacer click aquí" >Calcular Promedio de Notas</button>
+    </div>
+<script src="calculadoraPromedio.js"></script>
+</body>
+</html>
