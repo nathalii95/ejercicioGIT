@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO 1</title>
+</head>
+<body>
+    
+    <script>
+
+
+        //Solicitar al usuario la cantidad de elementos
+        var numeroDeElementos = prompt("Ingrese la cantidad de elementos para la serie Fibonacci:");
+
+        // Convertir la entrada del usuario a un número entero
+        numeroDeElementos = parseInt(numeroDeElementos);
+
+        //Validación
+        if (isNaN(numeroDeElementos) || numeroDeElementos < 1) {
+        console.error("Ingrese un número válido y mayor que 0.");
+        } else {
+        // Inicializar las variables de Fibonacci
+        var serieFibonacci = [0, 1];
+
+        // Calculo serie Fibonacci 
+        for (var i = 2; i < numeroDeElementos; i++) {
+        var siguienteElemento = serieFibonacci[i - 1] + serieFibonacci[i - 2];
+        serieFibonacci.push(siguienteElemento);
+        }
+
+        //Imprimir en serie Fibonacci en consola 
+        serieFibonacci.forEach(function (d) {
+        console.log("Serie Fibonacci " + d)
+        });
+
+        //En forma Array
+        console.log("Serie Fibonacci con " + numeroDeElementos + " elementos:", serieFibonacci);
+
+        }
+
+
+
+    </script>
+</body>
+</html>

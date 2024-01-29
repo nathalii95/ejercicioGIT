@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIO2</title>
+</head>
+<body>
+    
+    <script>
+
+    //Crear el arreglo de prueba
+    var datarecibi = ["unacadena", 3, 9, 1, 10, 500, 1, 10, true];
+    let numOrdenados = [];
+    //Función y envio de arreglo
+    ordenarNumeros(datarecibi); 
+
+    //Imprimir el resultado en consola
+    console.log("Arreglo original:", datarecibi);
+    console.log("Números ordenados de mayor a menor:", numOrdenados);
+
+        // Función para ordenar solo los num de mayor a menor
+        function ordenarNumeros(datarecibi) {
+            for (let i = 0; i < datarecibi.length; i++) {
+                    // Si el e es un número, agregarlo al arreglo ordenado
+                    if (typeof datarecibi[i] === 'number') { numOrdenados.push(datarecibi[i]);
+                    }
+                    } // Ordenar el arreglo de num utilizando el algoritmo de selección 
+                    for (let i = 0; i < numOrdenados.length - 1; i++) { 
+                        let indiceMenor = i; for (let j = i + 1; j < numOrdenados.length; j++) { 
+                            if (numOrdenados[j] > numOrdenados[indiceMenor]) { indiceMenor = j; } 
+                        } // Intercambiar los e
+                        let temp = numOrdenados[i]; 
+                        numOrdenados[i] = numOrdenados[indiceMenor]; numOrdenados[indiceMenor] = temp; }
+        }
+    </script>
+</body>
+</html>
